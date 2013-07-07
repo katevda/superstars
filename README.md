@@ -1,28 +1,11 @@
-== README
+# README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+Deze website zou een betere versie moeten worden van gosupermodels.
 
-Things you may want to cover:
-
-* Ruby version
-
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+Dat zal veel werk worden, dus alle hulp is welkom. We denken hierbij vooral aan:
 
 
-Please feel free to use a different markup language if you do not plan to run
-<tt>rake doc:app</tt>.
+- tekenaars/ontwerpers voor modellen, kleren, haren, accessoires ...
+- net als in gsm zal je punten/geld verdienen door spelletjes te spelen, dus moeten er ook nog spelletjes gemaakt worden
+- mijn papa helpt om de site te maken, in rails, maar ook daar is alle hulp welkom (dus tieners met rails kennis en zin aan deze site te werken, of zin om rails te leren?) 
+
