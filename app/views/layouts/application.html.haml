@@ -1,0 +1,38 @@
+!!! 5
+%html
+  %head
+  %title Superstars
+  = stylesheet_link_tag    "application", media: "all", "data-turbolinks-track" => true
+  = javascript_include_tag "application", "data-turbolinks-track" => true
+  = csrf_meta_tags
+
+%body
+  %nav#nav.pretty.navbar
+    = link_to :class => 'toggle', :data => {:'gumby-trigger' => "#nav &gt; ul"} do
+      %i.icon-menu
+    %h2.four.columns.logo
+      = link_to 'Superstars', root_path
+    %ul.three.columns
+      %li
+        = link_to 'Over', '#'
+      %li
+        = link_to 'Acties', '#'
+        .dropdown
+          %ul
+            %li
+              = link_to 'Item1', '#'
+            %li
+              = link_to 'Item2', '#'
+            %li
+              = link_to 'Item3', '#'
+      - if user_signed_in?
+        %li
+          = link_to current_user.email, edit_user_registration_path(current_user)
+      - else
+        %li
+          = link_to 'Login', new_user_session_path
+        %li
+          = link_to 'Registreer', new_user_registration_path
+  .container
+    = yield
+

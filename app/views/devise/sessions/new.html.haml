@@ -1,0 +1,26 @@
+.row
+  .push_two.eight.columns
+    %h2 Inloggen
+
+    = form_for(resource, :as => resource_name, :url => session_path(resource_name)) do |f|
+      %fieldset
+        %ul
+          %li.field
+            = f.label :login, :class => 'inline'
+            = f.email_field :login, :class => 'mywide text input'
+          %li.field
+            = f.label :password, :class => 'inline'
+            = f.password_field :password, :class => 'mywide password input'
+
+          - if devise_mapping.rememberable?
+            %li.field
+              = f.label :remember_me, :class => 'checkbox checked' do
+                = f.check_box :remember_me
+                %span
+                Remember me
+
+          %li.field
+            %label.inline
+            = f.submit "Log in", :data => {:disable_with => 'bewaren ...'}, :class => 'pretty medium primary btn mywide'
+
+= render :partial => "devise/shared/links"

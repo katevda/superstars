@@ -1,0 +1,27 @@
+.row
+  .push_two.eight.columns
+    %h2 Registreren
+
+    = form_for(resource, :as => resource_name, :url => registration_path(resource_name)) do |f|
+      = devise_error_messages!
+
+      %fieldset
+        %ul
+          %li.field
+            = f.label :login, :class => 'inline'
+            = f.text_field :login, :class => 'mywide text input'
+          %li.field
+            = f.label :email, :class => 'inline'
+            = f.email_field :email, :class => 'mywide email input'
+          %li.field
+            = f.label :password, :class => 'inline'
+            = f.password_field :password, :class => 'mywide email input'
+          %li.field
+            = f.label :password_confirmation, :class => 'inline'
+            = f.password_field :password_confirmation, :class => 'mywide email input'
+
+          %li.field
+            %label.inline
+            = f.submit "Registreer", :data => {:disable_with => 'bewaren ...'}, :class => 'pretty medium primary btn mywide'
+
+= render :partial => "devise/shared/links"
